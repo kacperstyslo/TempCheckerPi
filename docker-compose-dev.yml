@@ -1,0 +1,9 @@
+version: '3'
+services:
+  temp_checker_pi_config:
+    volumes:
+    - .:/app
+
+  temp_checker_pi:
+    volumes:
+      - .:/app

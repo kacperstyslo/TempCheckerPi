@@ -1,0 +1,32 @@
+version: '3'
+services:
+  temp_checker_pi_config:
+    build: .
+    image: temp_checker_pi_config:python
+    stdin_open: true
+    tty: true
+    ports:
+      - 5001:5001
+    networks:
+      temp_checker_pi_config_net:
+        ipv4_address: 192.168.0.10
+
+  temp_checker_pi:
+    build: .
+    image: temp_checker_pi:python
+    environment:
+      FLASK_DEBUG: 0
+      FLASK_APP: run_app.py
+    ports:
+    - 5000:5000
+    entrypoint:
+      - flask
+      - run
+      - --host=0.0.0.0
+
+networks:
+  temp_checker_pi_config_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/24

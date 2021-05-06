@@ -1,0 +1,4 @@
+colorama==0.4.4
+Flask==1.1.2
+paramiko==2.7.2
+pythonping==1.0.16

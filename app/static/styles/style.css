@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+    background-color: #393e46;
+}
+
+.chart_background {
+    background-color: #5c636e;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1700px;
+    }
+}
