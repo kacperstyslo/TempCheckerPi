@@ -62,17 +62,13 @@ If your are in nano editor just add this lines below(use the correct addressing 
     <details>
     <summary><b>Click here to see how to set up docker-compose!</b></summary>
 
-        docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-        docker-compose ps -a
-        docker-compose down
+        docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d & docker compose ps -a
    </details>
 
 
 
 ## Application view
-<details>
-    <summary><b>Click here to see how application looks like!</b></summary>
-    
+
 ### Chart view 
 ![temperature_example](https://user-images.githubusercontent.com/57534862/116559776-0e01ea00-a901-11eb-8608-c2d63d33bc48.png)
-</details>
+
