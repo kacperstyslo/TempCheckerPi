@@ -62,7 +62,7 @@ If your are in nano editor just add this lines below(use the correct addressing 
     <details>
     <summary><b>Click here to see how to set up docker-compose!</b></summary>
 
-        docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d & docker compose ps -a
+        docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build -d & docker-compose ps --filter "status=running"
    </details>
 
 
